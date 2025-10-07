@@ -1,0 +1,38 @@
+.footerProduct{
+    width: 100%;
+    height:150px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.leftFooter{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+color: white;
+}
+
+.top span{
+    color: #4F75D7;
+}
+.rightFooter{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.imgContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.bottom-text{
+    font-size: 10px;
+}

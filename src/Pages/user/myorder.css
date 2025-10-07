@@ -1,0 +1,17 @@
+.myorders-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .myorders-content {
+    flex: 1; /* This makes the content area expand to push footer down */
+    padding-bottom: 40px; /* Add some space before the footer */
+  }
+  
+  /* If your ProductFooter already has its own styling, you might not need this */
+  /* But if you need to add specific positioning styles: */
+  .myorders-page footer,
+  .myorders-page .footer {
+    margin-top: auto; /* Alternative approach to push footer to bottom */
+  }

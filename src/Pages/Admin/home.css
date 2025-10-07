@@ -1,0 +1,35 @@
+/* Layout.css */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  padding: 20px;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.main-content.expanded {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 768px) {
+  .main-content.collapsed {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .Adminsidebar.collapsed {
+    transform: translateX(-100%);
+  }
+  
+  .Adminsidebar.expanded {
+    width: 250px;
+    z-index: 1001;
+  }
+}

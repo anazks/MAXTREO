@@ -1,0 +1,105 @@
+/* Sidebar.css */
+.Adminsidebar {
+  background-color: #121212;;
+  color: #ecf0f1;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.Adminsidebar.expanded {
+  width: 240px;
+}
+
+.Adminsidebar.collapsed {
+  width: 70px;
+}
+
+.menu-icon {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-title {
+  text-align: center;
+  padding: 0 10px 20px;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #34495e;
+  white-space: nowrap;
+}
+
+.Adminsidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.Adminsidebar li {
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.Adminsidebar li:hover {
+  background-color: #34495e;
+}
+
+.Adminsidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.Adminsidebar a:hover {
+  color: #3498db;
+}
+
+.Adminsidebar .icon {
+  font-size: 1.2rem;
+  min-width: 30px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.Adminsidebar a:hover .icon {
+  transform: translateX(3px);
+  color: #3498db;
+}
+
+/* Active route styling */
+.Adminsidebar li.active {
+  background-color: #34495e;
+  border-left: 4px solid #3498db;
+}
+
+.Adminsidebar li.active a {
+  color: #3498db;
+}
+
+/* Animation for expanding/collapsing */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.Adminsidebar.expanded ul li a span {
+  animation: fadeIn 0.3s ease forwards;
+}

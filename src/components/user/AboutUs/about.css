@@ -1,0 +1,206 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutMianDiv {
+  width: 70vw;
+  min-height: 80vh; /* Increased height */
+  height: auto;
+  margin: auto;
+  padding: 40px; /* Increased padding for better spacing */
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about {
+  width: 45%;
+  color: black;
+}
+
+.about h1 {
+  text-align: left;
+  font-family: "Radio Canada", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 54px;
+  color: black;
+}
+
+.descrpt {
+  color: black;
+}
+
+.descrpt span {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 30px;
+  color: rgba(231, 1, 60, 1);
+}
+
+.descrpt p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: justify;
+}
+.Team {
+  color: white;
+}
+.team-button-s {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.team-button-s:hover {
+  background-color: rgba(231, 1, 60, 1);
+  color: white;
+  transform: scale(1.05);
+}
+
+.iconsbtn-team {
+  font-size: 2rem;
+}
+
+.Team {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.misson {
+  margin-top: 20px;
+}
+.misson h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+.misson p {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: justify;
+  color: black;
+}
+
+.imageDiv {
+  width: 37%;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageDiv div {
+  height: 80%;
+  width: 80%;
+  background-color: white;
+  border-top-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  clip-path: polygon(0% 45%, 36% 0%, 100% 0%, 100% 74%, 67% 100%, 0% 99%);
+  background-image: url("../../../Images//coffyWith.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .imageDiv div {
+    display: none;
+  }
+  .aboutMianDiv {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: 50vh;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .about h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .descrpt span {
+    font-size: 18px;
+  }
+
+  .descrpt p {
+    font-size: 16px;
+  }
+
+  .team-button-quality {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .misson h1 {
+    font-size: 24px;
+  }
+
+  .misson p {
+    font-size: 14px;
+  }
+
+  .imageDiv {
+    width: 80%;
+    height: auto;
+  }
+
+  .imageDiv div {
+    height: 280px;
+    width: 95%;
+    clip-path: polygon(0% 45%, 36% 0%, 100% 0%, 100% 74%, 67% 100%, 0% 99%);
+  }
+}
+
+@media (max-width: 576px) {
+  .about h1 {
+    font-size: 25px;
+  }
+
+  .descrpt span {
+    font-size: 16px;
+  }
+
+  .descrpt p {
+    font-size: 14px;
+  }
+
+  .team-button {
+    font-size: 12px;
+  }
+
+  .misson p {
+    font-size: 12px;
+  }
+
+  .imageDiv div {
+    height: 200px;
+  }
+}

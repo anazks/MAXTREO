@@ -1,0 +1,417 @@
+.SupportPage {
+   
+    min-height: 100vh;
+    margin-top: 30px;
+    background: linear-gradient(to right, #FFFFFF 34%, #63A375 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.SupportPage .Body-support {
+    width: 100%;
+  
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Body-support .Content-support {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.Content-support .Heading-Content-support {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 1px;
+    align-items: center;
+}
+.Heading-Content-support .Title-Content-support {
+    flex: 1;
+}
+.Title-Content-support h2 {
+    font-size: 35px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.Heading-Content-support .Livechat-Content-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Livechat-Content-support .Livechatbtn-support {
+    height: 50px;
+    width: 150px;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.Livechatbtn-support .Livechatbtn-scroller {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 3px;
+    background-color: white;
+}
+.Content-support .headbodydivider-support {
+    height: 9px;
+    border-radius: 5px;
+    background-color: black;
+    margin: 10px 0;
+}
+.Content-support .Body-Content-support {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.Body-Content-support .Bibody-Content-support {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.Bibody-Content-support .ContentBox1-support,
+.Bibody-Content-support .ContentBox2-support {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.ContentBox1-support {
+    border: 3px solid black;
+}
+.ContentBox2-support {
+    border: 3px solid rgb(45, 107, 214);
+}
+.BiContentBox1 h2, .BiContentBox1 h3 {
+    margin: 10px 0;
+}
+.BiContentBox1 ul {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+}
+.BiContentBox2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.BiContentBox2 .Box1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Box1 .BiBox1, .Box1 .BiBox2, .Box1 .BiBox3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.BiBox2 .PicBox, .BiBox3 .PicBoxx {
+    flex: 0 0 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+}
+.BiBox2 .LocationBox ul, .BiBox3 .DetailBox ul {
+    margin: 0;
+    font-size: 14px;
+}
+.BiContentBox2 .Bussines-Card {
+    height: 35vh; 
+    width: 35vw; 
+    border-radius: 15px;
+    background-color: black; 
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.Bussines-Card .BiBussines-Card{
+    height: 30vh;
+    width: 30vw;
+}
+.BiBussines-Card .BussinessCard-Box{
+    height: 20vh;
+    width: 30vw;
+    display: flex;
+}
+.BussinessCard-Box .Bussiness-CardBox1{
+    height: 20vh;
+    width: 10vw;
+}
+.Bussiness-CardBox1 .BHeadding{
+    font-size: 55px;
+}
+.BussinessCard-Box .Bussiness-CardBox2{
+    height: 20vh;
+    width: 20vw;
+}
+.Bussiness-CardBox2 .BsubHeadding{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Bussiness-CardBox2 .Bsub{
+    font-size: 15px;
+}
+.BiBussines-Card .Bussiness-CardBox3{
+    height: 10vh;
+    width: 30vw;
+}
+.Bussiness-CardBox3 .BsubHeaddingg{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Bussiness-CardBox3 .Bsubb{
+    color: yellow;
+}
+@media (max-width: 1200px) {
+    .Bussines-Card {
+        height: 30vh; 
+        width: 33vw !important;  
+    }
+    .Bussines-Card .BiBussines-Card {
+        height: 25vh;
+        width: 25vw;
+    }
+    .BiBussines-Card .BussinessCard-Box {
+        height: 18vh;
+        width: 25vw;
+    }
+    .BussinessCard-Box .Bussiness-CardBox1 {
+        height: 18vh;
+        width: 8vw;
+    }
+    .Bussiness-CardBox1 .BHeadding {
+        font-size: 45px;
+    }
+    .BussinessCard-Box .Bussiness-CardBox2 {
+        height: 18vh;
+        width: 17vw;
+    }
+    .Bussiness-CardBox2 .BsubHeadding {
+        font-size: 25px;
+    }
+    .Bussiness-CardBox2 .Bsub {
+        font-size: 13px;
+    }
+    .BiBussines-Card .Bussiness-CardBox3 {
+        height: 8vh;
+        width: 25vw;
+    }
+    .Bussiness-CardBox3 .BsubHeaddingg {
+        font-size: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .Bussines-Card {
+        height: 30vh; 
+        width: 33vw !important;  
+    }
+    .Bussines-Card .BiBussines-Card {
+        height: 25vh;
+        width: 25vw;
+    }
+    .BiBussines-Card .BussinessCard-Box {
+        height: 18vh;
+        width: 25vw;
+    }
+    .BussinessCard-Box .Bussiness-CardBox1 {
+        height: 18vh;
+        width: 8vw;
+    }
+    .Bussiness-CardBox1 .BHeadding {
+        font-size: 40px;
+    }
+    .BussinessCard-Box .Bussiness-CardBox2 {
+        height: 18vh;
+        width: 17vw;
+    }
+    .Bussiness-CardBox2 .BsubHeadding {
+        font-size: 20px;
+    }
+    .Bussiness-CardBox2 .Bsub {
+        font-size: 10px;
+    }
+    .BiBussines-Card .Bussiness-CardBox3 {
+        height: 8vh;
+        width: 25vw;
+    }
+    .Bussiness-CardBox3 .BsubHeaddingg {
+        font-size: 15px;
+    }
+}
+@media (max-width: 800px) {
+    .Bussines-Card {
+        height: 25vh; 
+        width: 50vw !important;
+    }
+    .Bussines-Card .BiBussines-Card {
+        height: 30vh;
+        width: 45vw;
+        
+    }
+    .BiBussines-Card .BussinessCard-Box {
+        height: 15vh;
+        width: 45vw;
+        ;
+    }
+    .BussinessCard-Box .Bussiness-CardBox1 {
+        height: 15vh;
+        width: 10vw;
+    }
+    .Bussiness-CardBox1 .BHeadding {
+        font-size: 39px;
+    }
+    .BussinessCard-Box .Bussiness-CardBox2 {
+        height: 15vh;
+        width: 35vw;
+    }
+    .Bussiness-CardBox2 .BsubHeadding {
+        font-size: 25px;
+    }
+    .Bussiness-CardBox2 .Bsub {
+        font-size: 12px;
+    }
+    .BiBussines-Card .Bussiness-CardBox3 {
+        height: 15vh;
+        width: 45vw;
+    }
+    .Bussiness-CardBox3 .BsubHeaddingg {
+        font-size: 18px;
+    }
+    .Bussiness-CardBox3 .Bsubb{
+        font-size: 15px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .Heading-Content-support {
+        flex-direction: column;
+    }
+    .Content-support .Body-Content-support {
+        padding: 10px;
+    }
+    .Body-Content-support .Bibody-Content-support {
+        flex-direction: column;
+    }
+    .Bibody-Content-support .ContentBox1-support,
+    .Bibody-Content-support .ContentBox2-support {
+        width: 100%;
+    }
+    
+}
+@media (max-width: 600px) {
+    .Bussines-Card {
+        height: 20vh; 
+        width: 60vw !important;
+    }
+    .Bussines-Card .BiBussines-Card {
+        height: 28vh;
+        width: 50vw;
+    }
+    .BiBussines-Card .BussinessCard-Box {
+        height: 12vh;
+        width: 50vw;
+    }
+    .BussinessCard-Box .Bussiness-CardBox1 {
+        height: 10vh;
+        width: 10vw;
+       
+    }
+    .Bussiness-CardBox1 .BHeadding {
+        font-size: 25px;
+    }
+    .BussinessCard-Box .Bussiness-CardBox2 {
+        height: 12vh;
+        width: 40vw;
+        
+    }
+    .Bussiness-CardBox2 .BsubHeadding {
+        font-size: 20px;
+    }
+    .Bussiness-CardBox2 .Bsub {
+        font-size: 10px;
+    }
+    .BiBussines-Card .Bussiness-CardBox3 {
+        height: 5vh;
+        width: 50vw;
+        
+    }
+    .Bussiness-CardBox3 .BsubHeaddingg {
+        font-size: 15px;
+    }
+    .Bussiness-CardBox3 .Bsubb{
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px) {
+    .Bussines-Card {
+        height: 20vh; 
+        width: 60vw !important;
+    }
+    .Bussines-Card .BiBussines-Card {
+        height: 28vh;
+        width: 50vw;
+    }
+    .BiBussines-Card .BussinessCard-Box {
+        height: 12vh;
+        width: 50vw;
+    }
+    .BussinessCard-Box .Bussiness-CardBox1 {
+        height: 10vh;
+        width: 10vw;
+       
+    }
+    .Bussiness-CardBox1 .BHeadding {
+        font-size: 25px;
+    }
+    .BussinessCard-Box .Bussiness-CardBox2 {
+        height: 12vh;
+        width: 40vw;
+        
+    }
+    .Bussiness-CardBox2 .BsubHeadding {
+        font-size: 20px;
+    }
+    .Bussiness-CardBox2 .Bsub {
+        font-size: 10px;
+    }
+    .BiBussines-Card .Bussiness-CardBox3 {
+        height: 5vh;
+        width: 50vw;
+        
+    }
+    .Bussiness-CardBox3 .BsubHeaddingg {
+        font-size: 15px;
+    }
+    .Bussiness-CardBox3 .Bsubb{
+        font-size: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .Title-Content-support h2 {
+        font-size: 20px;
+    }
+    .Livechat-Content-support .Livechatbtn-support {
+        width: 120px;
+    }
+    .Livechatbtn-support .Livechatbtn-scroller {
+        height: 35px;
+        width: 35px;
+    }
+    
+}

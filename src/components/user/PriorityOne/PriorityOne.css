@@ -1,0 +1,235 @@
+/* PriorityOne.css - Improved Responsive Design */
+.priority-one-container {
+  width: 100%;
+    padding: 45px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.priority-one-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #3498db, #9b59b6, #e74c3c);
+  z-index: 1;
+}
+
+.content-wrappers {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: #222;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #3498db;
+  margin: 10px auto 0;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  margin: 15px 0 0;
+  color: #555;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.team-member {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.person-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover .person-image {
+  transform: scale(1.05);
+}
+
+.specialty-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.person-name {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: bold;
+  margin: 0.5rem 0 0.3rem;
+  color: #222;
+}
+
+.person-position {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  color: #555;
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .priority-one-container {
+    padding: 2.5rem;
+  }
+  
+  .header {
+    text-align: left;
+    padding: 0 1rem;
+  }
+  
+  .title::after {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .team-container {
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    width: calc(50% - 2rem);
+    max-width: none;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .team-container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .team-member {
+    width: calc(33.333% - 1.5rem);
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 576px) {
+  .priority-one-container {
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .image-wrapper {
+    max-width: 200px;
+  }
+  
+  .specialty-tag {
+    padding: 6px 0;
+    font-size: 0.8rem;
+  }
+  
+  .person-name {
+    font-size: 1.1rem;
+  }
+  
+  .person-position {
+    font-size: 0.75rem;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,210 @@
+/* Parallax Reveal Effect Styles */
+.parallax-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  scroll-snap-align: start;
+}
+
+/* Split Panels */
+.panel {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  transition: transform 0.3s ease-out;
+  z-index: 3;
+}
+
+.panel-left {
+  left: 0;
+}
+
+.panel-right {
+  right: 0;
+}
+
+/* Background Image with Parallax Effect */
+.parallax-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-out, opacity 0.5s ease-out;
+  z-index: 2;
+}
+
+/* Main Title Text */
+.title-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.3em;
+  z-index: 4;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-out;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.title-neo {
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.title-tokyo {
+  right: 25%;
+  transform: translate(50%, -50%);
+}
+
+/* Subtitle Section */
+.subtitle-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  transition: opacity 0.5s ease-out;
+  width: 80%;
+  max-width: 500px;
+}
+
+.subtitle-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #DA0037;
+  border: none;
+  margin: 12px auto;
+}
+
+.subtitle-tagline {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.subtitle-cta {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.subtitle-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Rain Effect Overlay */
+.rain-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+  animation: rainAnimation 15s linear infinite;
+}
+
+/* Glow Effect */
+.glow-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 204, 255, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  animation: glowAnimation 3s infinite alternate;
+}
+
+/* Keyframe Animations */
+@keyframes rainAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes glowAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+.welcome-home-container {
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.tokyo-container {
+  position: relative;
+  width: 100%;
+  margin-top: 65vh; /* Initial margin for all screens */
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 768px) {
+  .tokyo-container {
+    margin-top: 65%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .tokyo-container {
+    margin-top: 65%;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+  .title-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 3rem;
+  }
+  
+  .title-neo {
+    left: 22%;
+  }
+  
+  .title-tokyo {
+    right: 22%;
+  }
+}
+
+@media (max-width: 576px) {
+  .title-text {
+    font-size: 2rem;
+  }
+  
+  .title-neo {
+    left: 18%;
+  }
+  
+  .title-tokyo {
+    right: 18%;
+  }
+  
+  .subtitle-container {
+    width: 90%;
+  }
+}

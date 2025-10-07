@@ -1,0 +1,156 @@
+/* Verifying.css */
+
+.verifying-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+  }
+  
+  .verifying-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Spinner Animation */
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(59, 130, 246, 0.2);
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Loading Dots Animation */
+  .verifying-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dots {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    text-align: left;
+  }
+  
+  .dots::after {
+    content: '';
+    animation: dotty 1.5s linear infinite;
+  }
+  
+  @keyframes dotty {
+    0%   { content: ''; }
+    25%  { content: '.'; }
+    50%  { content: '..'; }
+    75%  { content: '...'; }
+    100% { content: ''; }
+  }
+  
+  .verifying-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  /* Success Animation */
+  .result-animation.success {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .result-animation.error {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .checkmark-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ecfdf5;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .checkmark {
+    transform: rotate(45deg);
+    height: 22px;
+    width: 11px;
+    border-bottom: 3px solid #10b981;
+    border-right: 3px solid #10b981;
+    animation: checkmark 0.4s ease-in-out forwards;
+    opacity: 0;
+    transform-origin: center;
+  }
+  
+  @keyframes checkmark {
+    from { opacity: 0; height: 0; width: 0; }
+    to { opacity: 1; height: 22px; width: 11px; }
+  }
+  
+  /* Error Animation */
+  .error-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fee2e2;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .error-icon {
+    color: #ef4444;
+    font-size: 30px;
+    font-weight: bold;
+    animation: shake 0.4s ease-in-out forwards;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }
+  
+  .success-title, .error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-text, .error-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  .error-title {
+    color: #b91c1c;
+  }

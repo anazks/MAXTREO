@@ -1,0 +1,206 @@
+.blog-containers {
+    display: flex;
+    flex-wrap: wrap;
+     width: 90vw;
+    height: 100vh;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 30px;
+    position: relative;
+   
+}
+
+/* Left Section */
+.blog-left {
+    width: 50%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+    
+}
+
+.blog-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.blog-subHeading {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.blog-heading span {
+    font-size: 2.5rem;
+}
+
+.textLogo {
+    font-size: 2.5rem;
+}
+
+/* Main Heading Section */
+.blog-SubMainHeading {
+    width: 60%;
+    height: 70px;
+    margin: auto;
+    margin-top: 5%;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.blog-details{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+.blog-details ul {
+    list-style-type: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0; /* Ensure there's no default padding on the list */
+}
+
+.blog-details ul li {
+    margin-top: 10px; /* Add spacing between the list items */
+}
+.blog-SearchBox{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    bottom: 30%;
+    position: absolute;
+}
+.blog-SearchBox h4{
+    margin-top: 13px;
+    margin-left: 15%;
+    color: gray;
+}
+/* Right Section */
+.blog-right {
+    width: 50%;
+    border-radius: 30px;
+    height: 100%;
+}
+.searchBox-blog {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.search-input {
+    flex: 1; /* Makes the input take up the remaining space */
+    padding: 10px;
+    height: 100px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 5px 0 0 5px; /* Rounded corners for the input */
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.search-button {
+    background-color: #28a745;
+    width: 250px;
+    height: 80px;
+    font-size: 2rem;
+    border-radius: 15px;
+    border:none;
+    color: white;
+}
+
+.search-button:hover {
+    background-color: #218838;
+}
+.blog-right{
+    width: 50%;
+}
+.blog-right img{
+    width: 90%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog-SearchBox,.blog-right{
+        display: none;
+    }
+    .blog-left,
+    .blog-right {
+        width: 100%;
+        border-radius: 0; /* Remove rounded corners on smaller devices for cleaner stacking */
+    }
+
+    .blog-header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .blog-heading span {
+        font-size: 2rem;
+    }
+
+    .textLogo {
+        font-size: 2rem;
+    }
+
+    .blog-SubMainHeading {
+        font-size: 2rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-SearchBox, .blog-right{
+        display: none;
+    }
+    .blog-heading span {
+        font-size: 1.8rem;
+    }
+
+    .textLogo {
+        font-size: 1.8rem;
+    }
+
+    .blog-SubMainHeading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-SearchBox, .blog-right{
+        display: none;
+    }
+    .blog-containers {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-header {
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .blog-heading span,
+    .textLogo {
+        font-size: 1.5rem;
+    }
+
+    .blog-SubMainHeading {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+}

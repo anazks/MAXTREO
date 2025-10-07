@@ -1,0 +1,342 @@
+:root {
+    /* Light Theme Core Colors */
+    --background-light: #f5f7fa;
+    --card-bg-light: #ffffff;
+    --section-bg-light: #ffffff;
+    --text-primary-light: #333340;
+    --text-secondary-light: #62626e;
+    
+    /* Accent Colors */
+    --accent-blue: #0086ff;
+    --accent-purple: #6236ca;
+    --accent-pink: #e41e75;
+    --accent-gradient: linear-gradient(135deg, #6236ca, #0086ff);
+    
+    /* UI Elements */
+    --card-border-light: rgba(210, 215, 220, 0.8);
+    --card-hover-shadow-light: 0 8px 25px rgba(0, 134, 255, 0.15);
+    --button-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+
+
+.neo-tickets {
+    width: 100%;
+    border-radius: 12px;
+    background: black;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 0;
+  }
+  .priority-one{
+    display: flex !important;
+    justify-content: left baseline !important;
+    align-items: baseline !important;
+    color: white !important;
+  }
+  .priority-one .neo-heading-footer, .neo-secheading-footer{
+    color: white !important;
+  }
+  
+  .tickets-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .left-items{
+
+   width: 58%;
+  }
+  .right-items {
+    width: 38%; /* roughly half on desktop */
+}
+  
+  .neo-logo-footer {
+    align-items: flex-start;
+    max-height: 200px;
+    color: white !important;
+  }
+  
+  .grievance-tab {
+    color: white;
+    margin-top: 100px;
+  }
+  
+  .grievance-ticket {
+    width: 100%;
+    background-color:#63a375;
+    padding: 10px;
+    height: 100%;
+    border-radius: 20px 20px 20px 20px; 
+  }
+  .resolution-button{
+    color: rgb(71, 71, 71);
+    font-weight: 900;
+
+  }
+  .resolution-button:hover{
+    border: 1px solid ;
+    border-radius: 10px;
+    font-weight: 900;
+
+    color: rgb(71, 71, 71);
+  }
+  .resolution-button:focus{
+    border: 1px solid ;
+    border-radius: 10px;
+    font-weight: 900;
+    color: rgb(71, 71, 71);
+  }
+  .left-barcode{
+
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-right: 1px solid dashed;
+
+  }
+  .right-resolution{
+    width: 70%;
+    height: 100%;
+
+  }
+  /* .barcode-container{
+    transform: rotate(90deg);
+    width: 48%;
+  } */
+  .resolved-ticket{
+    width: 48%;
+    height: 100%;
+  }
+  .ticket-style{
+    width: 90%;
+    background-color: #3c6247;
+  }
+  .grievance-ticket textarea{
+    width: 100% !important;
+    background-color: transparent !important;
+  } 
+  .grievance-ticket-right {
+    width: 60%;
+    background-color: whitesmoke;
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;
+    /* border-radius: 12px 12px 0px 0px; */
+    position: relative;
+   
+    margin: auto;
+  }
+  
+  
+  .grave_head {
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .Ticket_id{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    padding-right: 10px;
+    font-size: 8px;
+    color: gray;
+    letter-spacing: -1px;
+    text-align: right;
+    display: block;
+  }
+  
+  .ticket-generation {
+    width: 100%;
+    padding: 0px;
+  }
+  
+  .ticket-header {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 12px 12px 0px 0px;
+  }
+  
+  .ticket-generation .ticket-head-h4 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 10px;
+  }
+  .date-time{
+    text-align: left;
+    color:black;
+    padding-left: 10px;
+    font-size: 8px;
+    font-weight: 600;
+  }
+  .right-items .grieve-details{
+    padding: 20px;
+    border-bottom: dashed ;
+
+  }
+  .grieve-details .h1{
+        font-size: 30px;
+        font-weight: 900;
+  }
+  /* .grievance-ticket .grievance-text{
+    text-decoration: underline dashed;
+  } */
+ 
+  
+  .grieve-form {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .grieve-form input {
+    width: 100%;
+    padding:  5px !important;
+    font-size: 16px;
+    border: 1px solid #101010  !important;
+    border-radius: 10px !important;
+    outline: none;
+    background-color: white !important;
+  }
+  
+  .grieve-form input:focus {
+    border-color: whitesmoke !important;
+  }
+  
+  .grieve-form label {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    padding: 0 4px;
+    color: #272727;
+    transition: 0.2s ease;
+    pointer-events: none;
+    font-size: 10px;
+  }
+  
+  .grieve-form input:focus + label,
+  .grieve-form input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 8px;
+    font-size: 12px;
+    color: #000;
+  }
+  #serialcode{
+    background-color: gray !important;
+    border: none !important;
+  }
+  .grievance{
+    padding: 20px;
+    border-radius: 0px 0px 12px 12px;
+  }
+  .grievance textarea{
+    width: 100% !important;
+    background-color: transparent !important;
+    border: none  !important;
+    color: black !important;
+    margin-bottom: 20px;
+
+  }
+  .grievance textarea:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow:  none !important;
+  }
+  .grievance textarea:active{
+    border: none !important;
+    outline: none !important;
+  }
+  .grievance .grievance-submit-button{
+    width: 100%;
+    padding: 6px !important;
+    border-radius: 10px !important;
+    background-color: #63a375;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+  .grievance .grievance-submit-button:hover{
+    background-color: #4f8a60;
+  }
+  
+  /* --- RESPONSIVENESS --- */
+  @media (max-width: 1024px) {
+    .left-items,
+    .right-items {
+      width: 100%;
+    }
+    .grievance-ticket{
+        width: 80%;
+        margin: auto;
+    }
+    .grievance-ticket-right{
+        width: 80%;
+        margin: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tickets-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .left-items,
+    .right-items {
+      width: 100%;
+    }
+  
+    .grievance-ticket {
+      width: 90%;
+      padding: 15px;
+      margin: auto;
+    }
+    .grievance-ticket-right{
+        width: 90%;
+      padding: 15px;
+    }
+  
+    .ticket-header {
+      font-size: 14px;
+    }
+  
+    .ticket-generation .ticket-head-h4 {
+      letter-spacing: 6px;
+      font-size: 16px;
+    }
+  
+    .grave_head {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ticket-header {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .ticket-generation .ticket-head-h4 {
+      letter-spacing: 4px;
+      font-size: 14px;
+    }
+  
+    .grave_head {
+      font-size: 14px;
+    }
+  
+    .grievance-ticket {
+      width: 100%;
+      padding: 10px;
+      margin: auto;
+
+    }
+    .grievance-ticket-right{
+        width: 100%;
+        padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,328 @@
+/* Prefix all classes with 'pc-' (product card) to avoid conflicts */
+/* Dark mode variables and toggles */
+
+:root {
+  /* Light Theme Variables */
+  --light-bg: #f9fafb;
+  --light-card-bg: #ffffff;
+  --light-text-primary: #1f2937;
+  --light-text-secondary: #4b5563;
+  --light-accent: #3b82f6;
+  --light-card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --light-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --light-product-image-bg: #f3f4f6;
+  
+  /* Dark Theme Variables */
+  --dark-bg: #121212;
+  --dark-card-bg: #1e1e1e;
+  --dark-text-primary: #e0e0e0;
+  --dark-text-secondary: #a0a0a0;
+  --dark-accent: #4f8df9;
+  --dark-card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --dark-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --dark-product-image-bg: #2a2a2a;
+  
+  /* Shared Variables */
+  --tag-popular: #3b82f6;
+  --tag-sale: #ef4444;
+  --tag-new: #10b981;
+}
+
+/* Theme Toggle Button */
+.pc-theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pc-theme-toggle-btn {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.light-mode .pc-theme-toggle-btn {
+  border-color: var(--light-text-secondary);
+  color: var(--light-text-secondary);
+}
+
+.dark-mode .pc-theme-toggle-btn {
+  border-color: var(--dark-text-secondary);
+  color: var(--dark-text-secondary);
+}
+
+.pc-theme-toggle-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Base Styles with Theme Support */
+.pc-recommendations-section {
+  padding: 3rem 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode.pc-recommendations-section {
+  background-color: var(--light-bg);
+  color: var(--light-text-primary);
+}
+
+.dark-mode.pc-recommendations-section {
+  background-color: var(--dark-bg);
+  color: var(--dark-text-primary);
+}
+
+.pc-recommendations-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.light-mode .pc-recommendations-title {
+  color: var(--light-text-primary);
+}
+
+.dark-mode .pc-recommendations-title {
+  color: var(--dark-text-primary);
+}
+
+.pc-recommendations-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.light-mode .pc-recommendations-title::after {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.dark-mode .pc-recommendations-title::after {
+  background: linear-gradient(90deg, #4f8df9, #77adff);
+}
+
+.pc-product-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pc-product-card {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light-mode .pc-product-card {
+  background-color: var(--light-card-bg);
+  box-shadow: var(--light-card-shadow);
+}
+
+.dark-mode .pc-product-card {
+  background-color: var(--dark-card-bg);
+  box-shadow: var(--dark-card-shadow);
+}
+
+.pc-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.light-mode .pc-product-card:hover {
+  box-shadow: var(--light-card-hover-shadow);
+}
+
+.dark-mode .pc-product-card:hover {
+  box-shadow: var(--dark-card-hover-shadow);
+}
+
+.pc-product-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.light-mode .pc-product-image-container {
+  background-color: var(--light-product-image-bg);
+}
+
+.dark-mode .pc-product-image-container {
+  background-color: var(--dark-product-image-bg);
+}
+
+.pc-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  padding: 12px;
+}
+
+.pc-product-card:hover .pc-product-image {
+  transform: scale(1.05);
+}
+
+.pc-product-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.pc-tag-popular {
+  background: var(--tag-popular);
+}
+
+.pc-tag-sale {
+  background: var(--tag-sale);
+}
+
+.pc-tag-new {
+  background: var(--tag-new);
+}
+
+.pc-quick-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.pc-product-card:hover .pc-quick-actions {
+  transform: translateY(0);
+}
+
+.pc-action-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pc-view-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.pc-view-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pc-cart-button {
+  color: white;
+}
+
+.light-mode .pc-cart-button {
+  background-color: var(--light-accent);
+}
+
+.light-mode .pc-cart-button:hover {
+  background-color: #2563eb;
+}
+
+.dark-mode .pc-cart-button {
+  background-color: var(--dark-accent);
+}
+
+.dark-mode .pc-cart-button:hover {
+  background-color: #3672db;
+}
+
+.pc-product-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.pc-product-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.light-mode .pc-product-name {
+  color: var(--light-text-primary);
+}
+
+.dark-mode .pc-product-name {
+  color: var(--dark-text-primary);
+}
+
+.pc-product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.light-mode .pc-product-price {
+  color: var(--light-accent);
+}
+
+.dark-mode .pc-product-price {
+  color: var(--dark-accent);
+}
+
+/* Dark mode for body (added via JS) */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pc-product-carousel {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .pc-product-image-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pc-recommendations-section {
+    padding: 2rem 1rem;
+  }
+  
+  .pc-product-carousel {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .pc-product-image-container {
+    height: 160px;
+  }
+  
+  .pc-product-name {
+    font-size: 0.9rem;
+  }
+  
+  .pc-product-price {
+    font-size: 1rem;
+  }
+}

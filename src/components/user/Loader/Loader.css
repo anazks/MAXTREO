@@ -1,0 +1,162 @@
+/* Loader.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+:root {
+  --neon-blue: #00f3ff;
+  --neon-pink: #ff00a0;
+  --neon-purple: #bc13fe;
+  --dark-bg: #0a0a0a;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  background-color: var(--dark-bg);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2rem;
+}
+
+.spinner-outer,
+.spinner-middle,
+.spinner-inner {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.spinner-outer {
+  width: 80px;
+  height: 80px;
+  border-top-color: var(--neon-blue);
+  border-right-color: var(--neon-blue);
+  animation: spin 2s linear infinite;
+}
+
+.spinner-middle {
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 10px;
+  border-bottom-color: var(--neon-pink);
+  border-left-color: var(--neon-pink);
+  animation: spin 1.5s linear infinite reverse;
+}
+
+.spinner-inner {
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: 20px;
+  border-top-color: var(--neon-purple);
+  border-left-color: var(--neon-purple);
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+.loading-subtext {
+  color: #888;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.dot-1, .dot-2, .dot-3 {
+  opacity: 0;
+  animation: dot-fade 1.5s infinite;
+}
+
+.dot-2 {
+  animation-delay: 0.5s;
+}
+
+.dot-3 {
+  animation-delay: 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dot-fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Add a glow effect to the entire loader on pulse */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5), 0 0 30px rgba(188, 19, 254, 0.3);
+  }
+}
+
+/* Make the loader responsive */
+@media (max-width: 768px) {
+  .spinner-container {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .spinner-outer {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .spinner-middle {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .spinner-inner {
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .loading-text {
+    font-size: 1.2rem;
+  }
+  
+  .loading-subtext {
+    font-size: 0.8rem;
+  }
+}   

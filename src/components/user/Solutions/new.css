@@ -1,0 +1,68 @@
+/* Container full screen */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+/* Main banner layout */
+.banner {
+  width: 90%;
+  height: 400px;
+  margin: 5% auto;
+  border-radius: 20px;
+  display: flex;
+  overflow: visible;         /* ✅ Allow panels to extend out */
+  position: relative;        /* ✅ Needed for child absolute or z-index */
+}
+
+
+/* Left-side text */
+.systemName {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  padding-left: 20px;
+  line-height: 1.2;
+}
+
+/* Right-side pannels container */
+.pannels {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+   background-color: black;
+
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Individual parallelogram image panel */
+.pannel {
+  width: 120px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: skewX(-25deg);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  position: relative;     /* ✅ Enable layering with z-index */
+  z-index: 1;
+}
+
+/* Optional hover effect */
+.pannel:hover {
+  transform: skewX(-25deg) translateY(-40px);  /* ✅ Moves top above the banner */
+  z-index: 10;                                 /* ✅ Makes sure it appears above all */
+}
+

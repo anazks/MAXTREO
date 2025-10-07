@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainDiv {
+  width: 70vw;
+  min-height: 80vh; /* Increased height */
+  height: auto;
+  margin: auto;
+  padding: 40px; /* Increased padding for better spacing */
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftDiv {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leftDiv > div {
+  height: 50%;
+}
+.rightDiv {
+  margin-left: 5%;
+  width: 50%;
+  height: 95%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center; /* Centers the inner box horizontally */
+  align-items: center; /* Centers the inner box vertically */
+  border: 1px solid white;
+}
+
+.box {
+  width: 80%; /* Adjust width to be smaller than the main div */
+  height: 80%; /* Adjust height to be smaller than the main div */
+  background-color: white; /* Optional: Background color for the inner box */
+  border-radius: 15px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
+  display: flex;
+  align-items: center; /* Center content inside the box */
+  justify-content: center; /* Center content inside the box */
+  text-align: center; /* Align text inside the box */
+}
+
+@media (max-width: 768px) {
+  .bottomImage {
+    display: none;
+  }
+  .mainDiv {
+    flex-direction: column;
+  }
+
+  .leftDiv,
+  .rightDiv {
+    width: 100%;
+  }
+
+  .leftDiv > div {
+    height: auto;
+  }
+}
+@media (max-width: 306px) {
+  .bottomImage {
+    display: none;
+  }
+}
+.leftDiv h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 52.83px;
+  text-align: left;
+  text-underline-position: under;
+  text-decoration: none;
+  color: black;
+}
+
+.leftDiv span {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: justify;
+  color: red;
+}
+
+.leftDiv p {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: justify;
+  color: black;
+  margin-top: 5%;
+}
+
+.team-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 40%;
+  height: auto;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.team-button:hover {
+  background-color: rgba(231, 1, 60, 1);
+  color: white;
+  transform: scale(1.05);
+}
+
+.iconsbtn-team {
+  font-size: 2.5rem;
+}
+
+.bottomImage {
+  width: 100%;
+  height: 300px;
+  border-radius: 30px;
+  border: 1px solid black;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  clip-path: polygon(0% 45%, 36% 0%, 100% 0%, 100% 74%, 67% 100%, 0% 99%);
+  justify-content: center; /* Align items horizontally */
+}
+
+.bottomImage img {
+  clip-path: polygon(0% 45%, 36% 0%, 100% 0%, 100% 74%, 67% 100%, 0% 99%);
+
+  height: 90%;
+  width: 100%;
+  border-radius: 15px; /* Optional, to add curvature to the image */
+  object-fit: contain; /* Ensures the image maintains aspect ratio */
+}
+.leftB {
+  height: 300px;
+}
+.imgD {
+  width: 80%;
+  height: 80%;
+  clip-path: polygon(0% 45%, 36% 0%, 100% 0%, 100% 74%, 67% 100%, 0% 99%);
+}
+.rightDiv .box {
+  width: 90%;
+  height: 90%;
+  border: 1px solid white;
+  /* margin-top: 5%; */
+  clip-path: polygon(0% 45%, 36% 0%, 100% 0%, 100% 74%, 67% 100%, 0% 99%);
+  background-size: contain;
+  background-image: url("https://s3-alpha-sig.figma.com/img/c4cf/7457/a703e8505df14635131ce28ca9abe771?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l8vNAEOpleV3ah~5ZOpfmYnTrS28Oq1K4mbPJ-J2jj5JotAu6B~crUE5u9ip5H5NoEk12Q1tZF8YOfJ-jxAPaiOse3eh965zXAgpRnQnw0KFTNFoTaeWdGTK~4g1sQjmMXmYxd6TWmL38Y8lF3Z--~nSQGi1yPiJj90IWBpT8OwpveOngwnics6Sa4pWdA3AOJuNN6WviE~qig2q9~MTE~pPzvDJ-RkAJPhmFELn6b7RdHZQ8ZjSsfdrBXaVcCPgphz2eG6ox3v2oy1~mYflU1kIw61yOvHhP~wOcd4-M4Ee3yhPY5EHZqriuSCaKcrQPLZUuZ6mOds3O6nqm~WCIQ__");
+}

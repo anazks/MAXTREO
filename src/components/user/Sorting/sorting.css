@@ -1,0 +1,170 @@
+/* sorting.css */
+
+.sorting-containers {
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sorting-section {
+  margin-bottom: 15px;
+}
+
+.sorting-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.sorting-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-button {
+  position: relative;
+  background-color: #f5f5f5;
+  color: #555;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.category-button:hover {
+  background-color: #e9e9e9;
+  color: #333;
+}
+
+.category-button.active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
+}
+
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.category-button:active .button-glow {
+  opacity: 0.6;
+  animation: glow 0.3s forwards;
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.reset-button-container {
+  margin-top: 10px;
+}
+
+.reset-button {
+  background-color: transparent;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.reset-button.active {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* New styles for sort buttons */
+.sort-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sort-button {
+  background-color: #f5f5f5;
+  color: #555;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sort-button:hover {
+  background-color: #e9e9e9;
+  color: #333;
+}
+
+.sort-button.active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
+}
+
+.clear-sort-container {
+  margin-top: 10px;
+}
+
+.clear-sort-button {
+  background-color: transparent;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-sort-button:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}

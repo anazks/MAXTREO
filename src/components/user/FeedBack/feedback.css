@@ -1,0 +1,456 @@
+  /* Optimized Feedback Section UI with enhanced animations and alignment */
+
+  /* General Styles with improved container proportions */
+  .feedback {
+    width: 100%;
+    padding: 45px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  /* Add subtle background animation */
+  .feedback::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom right, rgba(218, 0, 55, 0.08), transparent 70%);
+    z-index: 0;
+    opacity: 0;
+    transform: scale(1.5);
+    animation: fadeInBackground 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  }
+
+  @keyframes fadeInBackground {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Enhanced Left Box with staged animations */
+  .leftB {
+    width: 48%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .leftB h1 {
+    font-family: "Raleway", sans-serif;
+    color: black;
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animated short line with expanded hover effect */
+  .ShortLine {
+    width: 50px;
+    height: 6px;
+    background-color: rgba(218, 0, 55, 1);
+    margin: 18px 0;
+    position: relative;
+    opacity: 0;
+    transform: scaleX(0.5) translateY(10px);
+    animation: lineExpand 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.2s;
+    transform-origin: left center;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .ShortLine:hover {
+    width: 80px;
+    transform: scaleX(1) translateY(0);
+    box-shadow: 0 2px 6px rgba(218, 0, 55, 0.4);
+  }
+
+  @keyframes lineExpand {
+    to {
+      opacity: 1;
+      transform: scaleX(1) translateY(0);
+    }
+  }
+
+  /* Enhanced Text Content with staggered animations */
+  .bottomBox {
+    width: 100%;
+    margin-top: 18px;
+    opacity: 0;
+    animation: fadeIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.5s;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .thousand {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 85px;
+    text-align: left;
+    color: black;
+    margin-bottom: 5px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.4s;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .thousand:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .bottomBox h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    text-align: left;
+    color: black;
+    margin: 15px 0;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.6s;
+    transition: all 0.4s ease;
+  }
+
+  .bottomBox h2:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Enhanced description with improved readability */
+  .description {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.9;
+    text-align: left;
+    color: #444;
+    margin-top: 15px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.8s;
+    transition: all 0.4s ease;
+    max-width: 95%;
+  }
+
+  .description:hover {
+    color: #222;
+  }
+
+  /* Enhanced Right Box with 3D perspective effects */
+  .rightB {
+    width: 48%;
+    height: 85vh;
+    min-height: 78vh;
+    border-radius: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUpIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.3s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  @keyframes fadeUpIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .rightB:hover {
+    transform: translateY(-5px) rotateY(2deg);
+    box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Enhanced canvas container */
+  #app {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(218, 0, 55, 0.1);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,240,240,0.8));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  #app:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(218, 0, 55, 0.15);
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: block;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+  }
+
+  canvas:hover {
+    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.15));
+  }
+
+  /* Enhanced Highlighted Text with animated underline */
+  .highlight {
+    color: rgba(218, 0, 55, 1);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: all 0.4s ease;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(218, 0, 55, 0.6);
+    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .highlight:hover {
+    color: rgba(218, 0, 55, 0.85);
+    transform: translateY(-2px);
+  }
+
+  .highlight:hover::after {
+    width: 100%;
+  }
+
+  /* Improved Responsive Design with smoother transitions */
+  @media screen and (max-width: 1200px) {
+    .feedback {
+      width: 85vw;
+      min-height: 85vh;
+      padding: 40px;
+    }
+    
+    .thousand {
+      font-size: 65px;
+      line-height: 75px;
+    }
+    
+    .leftB h1 {
+      font-size: 42px;
+    }
+    
+    .bottomBox h2 {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .feedback {
+      width: 90vw;
+      flex-direction: column;
+      align-items: center;
+      padding: 35px;
+      min-height: 90vh;
+    }
+    
+    .leftB, .rightB {
+      width: 100%;
+    }
+    
+    .leftB {
+      margin-bottom: 40px;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .ShortLine {
+      margin: 15px auto;
+    }
+    
+    .thousand, .bottomBox h2, .description {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .description {
+      max-width: 90%;
+      margin: 15px auto 0;
+    }
+    
+    .rightB {
+      min-height: 50vh;
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .feedback {
+      width: 92vw;
+      min-height: auto;
+      padding: 30px;
+    }
+    
+    .thousand {
+      font-size: 60px;
+      line-height: 70px;
+    }
+    
+    .leftB h1 {
+      font-size: 38px;
+    }
+    
+    .bottomBox h2 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    
+    .description {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .feedback {
+      width: 95vw;
+      padding: 25px 20px;
+    }
+    
+    .leftB h1 {
+      font-size: 32px;
+    }
+    
+    .thousand {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    
+    .bottomBox h2 {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    
+    .description {
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 100%;
+    }
+    
+    .rightB {
+      min-height: 40vh;
+      width: 95%;
+    }
+    
+    /* Adjust animations for mobile */
+    .leftB h1, .thousand, .bottomBox h2, .description {
+      animation-duration: 0.6s;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .feedback {
+      width: 98vw;
+      padding: 20px 15px;
+    }
+    
+    .leftB h1 {
+      font-size: 28px;
+    }
+    
+    .thousand {
+      font-size: 45px;
+      line-height: 55px;
+    }
+    
+    .bottomBox h2 {
+      font-size: 22px;
+      line-height: 32px;
+    }
+    
+    .description {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+    
+    .rightB {
+      min-height: 35vh;
+    }
+    
+    .ShortLine {
+      height: 5px;
+      margin: 12px auto;
+    }
+  }
+
+  /* Add animation trigger classes for scroll effects */
+  .fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Add hover pulse effect to prominent elements */
+  .pulse-on-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .pulse-on-hover:hover {
+    transform: scale(1.05);
+  }
+
+  /* Add keyboard accessibility focus styles */
+  .highlight:focus, 
+  .pulse-on-hover:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(218, 0, 55, 0.5);
+    border-radius: 2px;
+  }
+

@@ -1,0 +1,340 @@
+/* Base Styles - Single View */
+.gsv-container {
+  background-color: white;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  height: 98vh;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Compact Header Section */
+.gsv-header {
+  padding: 0.3rem 0;
+  text-align: center;
+  margin-bottom: 0.3rem; /* Slightly reduced margin */
+  flex-shrink: 0;
+}
+
+.gsv-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem; /* Slightly tighter spacing */
+}
+
+.gsv-main-title {
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.gsv-quote-marks {
+  color: #ff0044;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.gsv-typing-wrapper {
+  min-height: 1.6rem; /* Slightly reduced */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.15rem 0; /* Slightly reduced */
+}
+
+.gsv-typing-text {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.gsv-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  width: 2px;
+  background-color: #000;
+  animation: gsv-blink 1s infinite;
+}
+
+@keyframes gsv-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.gsv-subheading {
+  font-size: 0.7rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Content Section - Single View */
+.gsv-content-sections {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gsv-flex-container {
+  display: flex;
+  gap: 0.8rem; /* Slightly reduced gap */
+  margin-bottom: 0.5rem;
+  flex: 0.8; /* Reduced from 1 to 0.8 to make it take up less vertical space */
+  min-height: 0;
+  max-height: 80%; /* Added maximum height constraint */
+}
+
+/* Left Text Box */
+.gsv-text-box {
+  flex: 0.9; /* Slightly smaller proportion */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 0.5rem;
+  border-right: 1px solid #ff0044;
+}
+
+.gsv-staggered-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem; /* Reduced gap for tighter text */
+}
+
+.gsv-staggered-text {
+  font-size: 1.4rem; /* Increased font size as requested */
+  margin: 0;
+  line-height: 1.1; /* Slightly increased for better readability */
+  font-weight: 700;
+  letter-spacing: 0.5px; /* Added letter spacing */
+}
+
+.gsv-highlight-text {
+  color: #ff0044;
+}
+
+.gsv-possibilities-text {
+  color: #666;
+  font-size: 0.8rem; /* Slightly increased */
+  margin-top: 0.3rem;
+}
+
+/* Right Triangle Box */
+.gsv-triangle-box {
+  flex: 1.1; /* Increased proportion */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.4rem; /* Slightly reduced padding */
+}
+
+.gsv-triangle-container {
+  width: 100%;
+  max-width: 240px; /* Increased maximum width for the triangle */
+}
+
+.gsv-interactive-triangle {
+  position: relative;
+  width: 100%;
+}
+
+.gsv-triangle-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gsv-triangle-indicator {
+  position: absolute;
+  border: 1px dashed #ff0044;
+  opacity: 0.7;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.gsv-triangle-indicator-0 {
+  top: 35%;
+  left: 28%;
+  width: 22%;
+  height: 35%;
+  clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}
+
+.gsv-triangle-indicator-1 {
+  top: 35%;
+  right: 28%;
+  width: 22%;
+  height: 35%;
+  clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}
+
+.gsv-triangle-indicator-2 {
+  bottom: 15%;
+  left: 40%;
+  width: 22%;
+  height: 25%;
+  clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}
+
+/* Compact Project Eden Section */
+.gsv-project-eden {
+  display: flex;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  height: 28%; /* Slightly reduced height */
+  min-height: 110px; /* Slightly reduced min-height */
+}
+
+.gsv-project-eden.gsv-content-change {
+  opacity: 0.5;
+}
+
+.gsv-eden-left {
+  flex: 1;
+  padding: 0.7rem; /* Slightly reduced padding */
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+}
+
+.gsv-eden-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem; /* Slightly reduced gap */
+}
+
+.gsv-eden-circles {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.gsv-circle {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.gsv-blue-circle {
+  background: linear-gradient(135deg, #0047ab, #6a5acd);
+  top: 0;
+  left: 5px;
+}
+
+.gsv-purple-circle {
+  background: linear-gradient(135deg, #8a2be2, #da70d6);
+  bottom: 0;
+  right: 5px;
+}
+
+.gsv-eden-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+.gsv-eden-right {
+  flex: 2;
+  padding: 0.7rem; /* Slightly reduced padding */
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.gsv-eden-description {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.gsv-highlight {
+  color: #ff0044;
+  font-weight: bold;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .gsv-flex-container {
+    flex-direction: column;
+    gap: 0.6rem; /* Slightly reduced gap */
+  }
+  
+  .gsv-text-box {
+    border-right: none;
+    border-bottom: 1px solid #ff0044;
+    padding-right: 0;
+    padding-bottom: 0.4rem; /* Slightly reduced padding */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .gsv-staggered-text {
+    font-size: 1.3rem; /* Keep large for mobile */
+  }
+  
+  .gsv-triangle-box {
+    padding-left: 0;
+    padding-top: 0.4rem; /* Slightly reduced padding */
+  }
+  
+  .gsv-triangle-container {
+    max-width: 180px; /* Increased from 150px */
+  }
+  
+  .gsv-project-eden {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .gsv-eden-left {
+    padding: 0.5rem;
+  }
+  
+  .gsv-eden-right {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .gsv-main-title {
+    font-size: 0.7rem;
+  }
+  
+  .gsv-typing-text {
+    font-size: 1rem;
+  }
+  
+  .gsv-staggered-text {
+    font-size: 1.1rem; /* Still larger than original */
+  }
+  
+  .gsv-eden-title {
+    font-size: 0.6rem;
+  }
+  
+  .gsv-eden-description {
+    font-size: 0.65rem;
+  }
+}

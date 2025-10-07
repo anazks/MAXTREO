@@ -1,0 +1,229 @@
+.solutions-wrapper {
+
+  width: 100%;
+  overflow: visible;
+}
+
+.solutions-container {
+  font-family: Arial, sans-serif;
+  width: 90%;
+  margin: auto;
+  overflow: visible;
+  position: relative;
+}
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Fixed height */
+  background-color: black;
+  overflow: visible; /* Allow panels to extend outside */
+  border-radius: 30px;
+  margin-bottom: 100px; /* Extra space for extended panels */
+  padding-top: 80px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.banner-title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0;
+  line-height: 1;
+}
+
+.title-main {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.title-sub {
+  font-size: 5rem;
+  color: #888888;
+  font-weight: 900;
+}
+
+.game-panels {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 350px; /* Initial height inside black box */
+  width: 70%;
+  display: flex;
+  transform: skew(-15deg);
+  overflow: visible;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.game-panel {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transform-origin: bottom center;
+}
+
+.game-panel:hover {
+  height: 420px; /* Extended height (300px + 100px) */
+  transform: scale(1.05);
+  z-index: 20;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.game-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+  transition: all 0.3s ease;
+}
+
+.game-panel:hover .game-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+  padding-bottom: 3rem;
+}
+
+.game-name {
+  color: white;
+  font-weight: bold;
+  transform: skew(15deg);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.game-panel:hover .game-name {
+  font-size: 1.5rem;
+  opacity: 1;
+  transform: skew(15deg) translateY(-10px);
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.SecondDiv {
+  width: 90%;
+  height: 300px;
+  background-color: #888888;
+  margin: 20px auto;
+  border-radius: 30px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .game-panels {
+    width: 75%;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-banner {
+    height: 350px;
+  }
+  
+  .title-main, .title-sub {
+    font-size: 4rem;
+  }
+  
+  .game-panels {
+    width: 80%;
+    height: 250px;
+  }
+  
+  .game-panel:hover {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner {
+    height: 300px;
+    padding-top: 60px;
+    margin-bottom: 80px;
+  }
+  
+  .title-main, .title-sub {
+    font-size: 3.5rem;
+  }
+  
+  .banner-content {
+    padding: 1.5rem;
+  }
+  
+  .game-panels {
+    width: 85%;
+    height: 200px;
+  }
+  
+  .game-panel:hover {
+    height: 300px;
+    margin-bottom: -80px;
+  }
+  
+  .game-name {
+    font-size: 1rem;
+  }
+  
+  .game-panel:hover .game-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-banner {
+    height: 250px;
+    margin-bottom: 60px;
+  }
+  
+  .title-main, .title-sub {
+    font-size: 2.5rem;
+  }
+  
+  .game-panels {
+    width: 90%;
+    height: 150px;
+    flex-wrap: wrap;
+    position: relative;
+    transform: skew(0);
+    margin-top: 20px;
+    right: auto;
+    left: 0;
+  }
+  
+  .game-panel {
+    flex: 0 0 calc(50% - 5px);
+    height: 120px;
+    margin-bottom: 10px;
+    transform-origin: center;
+  }
+  
+  .game-panel:hover {
+    height: 180px;
+    /* margin-bottom: -30px; */
+  }
+  
+  .game-name {
+    transform: skew(0);
+  }
+  
+  .game-panel:hover .game-name {
+    transform: translateY(-5px);
+  }
+}

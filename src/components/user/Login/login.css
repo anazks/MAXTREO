@@ -1,0 +1,553 @@
+/* login.css */
+/* Main container */
+.login-container {
+  display: flex;
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section styling */
+.left-section {
+  flex: 1;
+  /* background: linear-gradient(135deg, #000428, #004e92); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('../../../Images/LoginWith/Loginbg.jpg');
+  /* opacity: 0.1; */
+  z-index: 1;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  padding-top: 3rem;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7));
+}
+
+.quote-container {
+  padding: 3rem;
+  z-index: 2;
+  text-align: center;
+}
+
+.quote {
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 2rem;
+}
+
+/* Right section styling */
+.right-section {
+  flex: 1.2;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  /* position: relative; */
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border: 2px solid #000;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 120px;
+}
+
+.black-btn {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.form-container, .Register-Container {
+  width: 90%;
+  max-width: 480px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.input-box {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.input-box:focus {
+  border-color: #004e92;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 78, 146, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.remember-forgot a {
+  color: #004e92;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.remember-forgot a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.icons div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icons div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #004e92;
+}
+
+.icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.team-buttons {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, #000428, #004e92);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-buttons::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+
+.team-buttons:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(10%, 10%);
+}
+
+.team-buttons:hover {
+  box-shadow: 0 7px 20px rgba(0, 78, 146, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Sequential form styling */
+.sequential-fields-container {
+  position: relative;
+}
+
+.field-container {
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: all 0.5s ease;
+  opacity: 0.7;
+}
+
+.active-field {
+  opacity: 1;
+}
+
+.next-field-button {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #004e92;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.next-field-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  color: #0066cc;
+}
+
+.back-button-small {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.back-button-small:hover {
+  color: #333;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.terms-next, .address-next {
+  position: relative;
+  right: auto;
+  transform: none;
+  margin-top: 1rem;
+  margin-left: auto;
+  display: block;
+}
+
+/* Checkbox styling */
+.check {
+  margin: 1rem 0;
+}
+
+.check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #004e92;
+}
+
+.check span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Progress indicator */
+.step-indicator {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background-color: #004e92;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 78, 146, 0.4);
+}
+
+.step-progress-bar {
+  height: 6px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #000428, #004e92);
+  transition: width 0.5s ease;
+  border-radius: 10px;
+}
+
+.age-display {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Animation */
+.animate-fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.9), 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+}
+
+/* Register container */
+.Register-Container h3 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.Register-Container h3 button {
+  background: none;
+  border: none;
+  color: #004e92;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.Register-Container h3 button:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  
+  .left-section {
+    height: 35vh;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+  }
+  
+  .right-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .form-container, .Register-Container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .next-field-button {
+    right: 0;
+  }
+  
+  .back-button-small {
+    left: 0;
+  }
+}
+
+/* OTP input styling */
+.otp-container {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.otp-input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.otp-input:focus {
+  border-color: #004e92;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 78, 146, 0.1);
+}
+
+.submit-button {
+  margin-top: 1rem;
+}
+/* Add this to your login.css file */
+
+.send-otp-button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #000428, #004e92);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.send-otp-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+
+.send-otp-button:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(10%, 10%);
+}
+
+.send-otp-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 78, 146, 0.3);
+  transform: translateY(-2px);
+}
+
+.send-otp-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 78, 146, 0.2);
+}

@@ -1,0 +1,340 @@
+/* Sidebar.css - Updated with right alignment and animations */
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar Base Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 320px;
+  background: transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(230, 230, 230, 0.8);
+}
+.sidebar::-webkit-scrollbar{
+  display: none;
+}
+/* Right-aligned sidebar */
+.sidebar.right-sidebar {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.sidebar.right-sidebar.open {
+  transform: translateX(0);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: rotate(90deg);
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  padding: 60px 25px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+}
+
+/* Auth Buttons */
+.sidebar-auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.sidebar-btn {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.login-btn:hover {
+  background-color: #eeeeee;
+  transform: translateY(-2px);
+}
+
+.register-btn {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+/* User Info */
+.sidebar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0.6);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4A90E2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.sidebar-user-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.sidebar-user-info span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Menu */
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-menu li {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.sidebar.open .sidebar-menu li {
+  animation: slideInRight 0.4s ease forwards;
+}
+
+.sidebar.open .sidebar-menu li:nth-child(1) { animation-delay: 0.1s; }
+.sidebar.open .sidebar-menu li:nth-child(2) { animation-delay: 0.15s; }
+.sidebar.open .sidebar-menu li:nth-child(3) { animation-delay: 0.2s; }
+.sidebar.open .sidebar-menu li:nth-child(4) { animation-delay: 0.25s; }
+.sidebar.open .sidebar-menu li:nth-child(5) { animation-delay: 0.3s; }
+.sidebar.open .sidebar-menu li:nth-child(6) { animation-delay: 0.35s; }
+.sidebar.open .sidebar-menu li:nth-child(7) { animation-delay: 0.4s; }
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  color: #4A90E2;
+  transform: translateX(5px);
+}
+
+.menu-icon {
+  margin-right: 12px;
+  font-size: 18px;
+  min-width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-icon {
+  transform: scale(1.2);
+  color: #4A90E2;
+}
+
+.logout-btn {
+  color: #e53935;
+}
+
+.logout-btn:hover {
+  background-color: rgba(229, 57, 53, 0.1);
+  color: #e53935;
+}
+
+.logout-btn:hover .menu-icon {
+  color: #e53935;
+}
+
+/* Locations */
+.sidebar-locations {
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.locations-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.title-icon {
+  color: #4A90E2;
+}
+
+.location {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(240, 240, 240, 0.5);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.location:hover {
+  background-color: rgba(240, 240, 240, 0.9);
+  transform: translateY(-2px);
+}
+
+.location h4 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.location p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 280px;
+  }
+  
+  .sidebar-content {
+    padding: 50px 20px 30px;
+  }
+}
