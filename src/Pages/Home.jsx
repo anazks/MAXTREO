@@ -8,7 +8,7 @@ function Home() {
       <NavBar />
       <WelcomeHome/>
       <Product/>
-      <Product/>
+      {/* <Product/> */}
       <Footer/>
     </div>
   );

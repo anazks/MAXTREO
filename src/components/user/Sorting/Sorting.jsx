@@ -86,7 +86,7 @@ function Sorting({ setProducts }) {
   };
 
   return (
-    <div className={`rounded-lg shadow-md border border-gray-200 p-6 my-6 transition-all duration-700 ease-out ${animateIn ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+    <div className={`rounded-lg shadow-sm border border-gray-200 p-4 my-6 transition-all duration-700 ease-out ${animateIn ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
       {/* Font import for Rajdhani */}
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
@@ -97,12 +97,12 @@ function Sorting({ setProducts }) {
       `}</style>
 
       {/* Categories Section */}
-      <div className="mb-8">
-        <h3 className="text-center text-xl font-bold text-black pb-3 mb-4 border-b-2 border-gray-200 rajdhani-font">
+      <div className="mb-6">
+        <h3 className="text-center text-lg font-bold text-gray-900 pb-2 mb-3 border-b border-gray-300 rajdhani-font">
           Browse Categories
         </h3>
         
-        <div className="flex flex-wrap justify-center gap-3 mt-4">
+        <div className="flex flex-wrap justify-center gap-2">
           {categories.length > 0 ? (
             categories.map((category, index) => (
               <button
@@ -111,28 +111,27 @@ function Sorting({ setProducts }) {
                 style={{
                   animationDelay: `${index * 0.1}s`,
                 }}
-                className={`relative overflow-hidden px-5 py-2 rounded-sm text-sm font-medium transition-all duration-300 ease-out transform hover:shadow-lg animate-fade-slide-up rajdhani-font ${
+                className={`relative overflow-hidden px-4 py-2 rounded-md text-xs font-medium transition-all duration-300 ease-out transform hover:shadow-md hover:scale-105 animate-fade-slide-up rajdhani-font ${
                   activeButton === category.id
                     ? 'bg-black text-white shadow-md'
-                    : 'bg-gray-200 text-gray-900 hover:shadow-lg'
+                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                 }`}
               >
                 {category.name}
-                <span className="absolute inset-0 bg-white/30 opacity-0 transition-opacity duration-300 pointer-events-none" />
               </button>
             ))
           ) : (
-            <p className="text-amber-700 text-sm animate-pulse rajdhani-font">Loading categories...</p>
+            <p className="text-gray-500 text-xs animate-pulse rajdhani-font">Loading categories...</p>
           )}
         </div>
 
-        <div className="mt-5 flex justify-center">
+        <div className="mt-3 flex justify-center">
           <button
             onClick={showAllProducts}
-            className={`text-sm px-4 py-2 rounded-sm transition-all duration-300 ease-out transform hover:shadow-lg rajdhani-font
+            className={`text-xs px-3 py-2 rounded-md transition-all duration-300 ease-out transform hover:shadow-md hover:scale-105 rajdhani-font
               ${activeButton === null
                 ? 'bg-black text-white shadow-md'
-                : 'bg-white border-2 border-gray-300 text-black hover:shadow-lg'
+                : 'bg-white border border-gray-300 text-gray-800 hover:border-gray-400'
               }`}
           >
             Show All Products
@@ -142,57 +141,57 @@ function Sorting({ setProducts }) {
 
       {/* Sorting Section */}
       <div className={`transition-all duration-500 ease-out ${animateIn ? 'opacity-100' : 'opacity-0'}`}>
-        <h3 className="text-center text-xl font-bold text-black pb-3 mb-4 border-b-2 border-gray-200 rajdhani-font">
+        <h3 className="text-center text-lg font-bold text-gray-900 pb-2 mb-3 border-b border-gray-300 rajdhani-font">
           Sort By
         </h3>
         
-        <div className="flex flex-wrap justify-center gap-3 mt-4">
+        <div className="flex flex-wrap justify-center gap-2">
           <button
             onClick={() => handleSortClick('price-high-low')}
-            className={`flex items-center gap-2 px-5 py-2 rounded-sm text-sm font-medium transition-all duration-300 ease-out transform hover:shadow-lg rajdhani-font ${
+            className={`flex items-center gap-1 px-4 py-2 rounded-md text-xs font-medium transition-all duration-300 ease-out transform hover:shadow-md hover:scale-105 rajdhani-font ${
               activeSortButton === 'price-high-low'
                 ? 'bg-black text-white shadow-md'
-                : 'bg-gray-200 text-gray-900 hover:shadow-lg'
+                : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
-            Price: High to Low
+            High to Low
           </button>
           
           <button
             onClick={() => handleSortClick('price-low-high')}
-            className={`flex items-center gap-2 px-5 py-2 rounded-sm text-sm font-medium transition-all duration-300 ease-out transform hover:shadow-lg rajdhani-font ${
+            className={`flex items-center gap-1 px-4 py-2 rounded-md text-xs font-medium transition-all duration-300 ease-out transform hover:shadow-md hover:scale-105 rajdhani-font ${
               activeSortButton === 'price-low-high'
                 ? 'bg-black text-white shadow-md'
-                : 'bg-gray-200 text-gray-900 hover:shadow-lg'
+                : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
-            Price: Low to High
+            Low to High
           </button>
           
           <button
             onClick={() => handleSortClick('newest')}
-            className={`flex items-center gap-2 px-5 py-2 rounded-sm text-sm font-medium transition-all duration-300 ease-out transform hover:shadow-lg rajdhani-font ${
+            className={`flex items-center gap-1 px-4 py-2 rounded-md text-xs font-medium transition-all duration-300 ease-out transform hover:shadow-md hover:scale-105 rajdhani-font ${
               activeSortButton === 'newest'
                 ? 'bg-black text-white shadow-md'
-                : 'bg-gray-200 text-gray-900 hover:shadow-lg'
+                : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
             </svg>
-            Newest First
+            Newest
           </button>
         </div>
 
         {/* Clear Sort Button (only visible when sorting is active) */}
         {activeSortButton && (
-          <div className="mt-4 flex justify-center">
+          <div className="mt-3 flex justify-center">
             <button
               onClick={() => {
                 // Clear sorting but keep category filter if any
@@ -202,7 +201,7 @@ function Sorting({ setProducts }) {
                 setProducts(currentProducts);
                 setActiveSortButton(null);
               }}
-              className="text-sm px-4 py-2 bg-white border-2 border-gray-300 text-black rounded-sm hover:shadow-lg transition-all duration-300 ease-out transform rajdhani-font"
+              className="text-xs px-3 py-1.5 bg-white border border-gray-300 text-gray-800 rounded-md hover:shadow-md transition-all duration-300 ease-out transform hover:scale-105 rajdhani-font"
             >
               Clear Sort
             </button>
